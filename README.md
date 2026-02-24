@@ -1,7 +1,7 @@
 # Personal-Finance-Tracker
 A personal finance managment system that automates expense tracking - from bank CSV exports and receipt photos to an interactive Power BI dashboard
 
-#Features
+# Features
 - CSV Import: Automatically loads transaction history exported from your bank account
 - AI Categorization: Connects to Google Gemini API to classify each transaction into a spending category (food, transport, entertainment, etc.)
 - Receipt OCR: Extracts date, amount, and merchant name from reccipt photos using Gemini's vision capabilites
