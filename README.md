@@ -7,8 +7,8 @@ A personal finance managment system that automates expense tracking - from bank 
 - Receipt OCR: Extracts date, amount, and merchant name from reccipt photos using Gemini's vision capabilites
 - Data Storage: All transactions are restored in a local SQLite database
 - Interactive Dashboard - Power BI report visualizing spending patterns, category breakdowns and monthly trends
-
-  #Tech stack
+  
+# Tech stack
 
 | Area | Tools |
 |---|---|
