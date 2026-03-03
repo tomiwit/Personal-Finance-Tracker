@@ -1,5 +1,6 @@
 import sqlite3
 import os
+import pandas as pd
 from dotenv import load_dotenv
 
 
@@ -23,8 +24,21 @@ create_table_kategorie = """CREATE TABLE kategorie (
                                 id_kategorii INTEGER PRIMARY KEY AUTOINCREMENT,
                                 nazwa_kategorii TEXT) """
 
-
+columns_raw_data = [
+    'Data operacji', 'Data ksiegowania', 'Tytul operacji', 
+    'Dane strony operacji', 'Rachunek strony operacji', 
+    'Kwota', 'Saldo', 'Waluta', 'Inne'
+]
 cursor.execute(create_table_kategorie)
 cursor.execute(create_table_wydatki)
 connection.commit()
 
+raw_data = pd.read_csv(
+    r"C:\Proj_1_FinanceTracker\Personal-Finance-Tracker\data\historia_2025-10-22_07109025900000000137007424.csv",
+    skiprows=1,      
+    header=None,    
+    sep=',',        
+    encoding='utf-8' 
+)
+
+raw_data.columns = columns_raw_data
